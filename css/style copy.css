@@ -1,0 +1,379 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  font-family: Roboto;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.order {
+  order: 0;
+}
+
+.order1 {
+  order: 1;
+}
+
+.order2 {
+  order: 2;
+}
+
+.order3 {
+  order: 3;
+}
+
+.order4 {
+  order: 4;
+}
+
+.order5 {
+  order: 5;
+}
+
+.order6 {
+  order: 6;
+}
+
+.order7 {
+  order: 7;
+}
+
+.order8 {
+  order: 8;
+}
+
+.order90 {
+  order: 90;
+}
+
+body {
+  background-image: url(https://cdn.discordapp.com/attachments/893911666687889418/893920435354370098/league-of-legends-lol-devyatikhvostaya-lisa-ahri-spirit-blossom-splsah-art-8k-oboi-3840x2400_9.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  height: 100%;
+}
+
+.wrapper {
+  flex-direction: column;
+  margin: 0% 15% 0%;
+  min-width: 320px;
+}
+
+header {
+  flex-direction: row;
+  min-width: 320px;
+  min-height: 120px;
+}
+header h1 {
+  font-size: 52px;
+  text-align: center;
+  margin: 4%;
+}
+
+.mid {
+  flex-direction: row;
+  flex: 1;
+}
+
+.flex-upper-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.flex-upper-gallery__item {
+  order: 1;
+  margin: 7.5px;
+  background-color: rgba(246, 85, 192, 0.719);
+  border-radius: 8px;
+}
+.flex-upper-gallery__item p {
+  display: block;
+  min-height: 32px;
+  display: block;
+  font-size: 200%;
+  text-align: center;
+}
+.flex-upper-gallery__button {
+  flex-direction: column;
+}
+.flex-upper-gallery__button_gallery {
+  width: 100%;
+}
+.flex-upper-gallery__button_gallery video {
+  position: relative;
+  top: -5px;
+  right: -5px;
+  justify-content: center;
+  border-radius: 8px;
+  max-height: 360px;
+  max-width: 640px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-upper-gallery__button_gallery video:hover {
+  top: 0;
+  right: 0;
+}
+.flex-upper-gallery__button_gallery img {
+  position: relative;
+  top: -5px;
+  right: -5px;
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 8px;
+  max-height: 450px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-upper-gallery__button_gallery img:hover {
+  top: 0;
+  right: 0;
+}
+.flex-upper-gallery__button_ungallery video {
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 8px;
+  max-height: 320px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-upper-gallery__button_ungallery img {
+  position: relative;
+  top: -5px;
+  right: -5px;
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 8px;
+  height: 320px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-upper-gallery__button_ungallery img:hover {
+  top: 0;
+  right: 0;
+}
+
+.flex-element-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-element-gallery__item {
+  order: 1;
+  margin: 7.5px;
+  background-color: rgba(246, 85, 192, 0.719);
+  border-radius: 8px;
+}
+.flex-element-gallery__item p {
+  display: block;
+  min-height: 32px;
+  display: block;
+  font-size: 200%;
+  text-align: center;
+}
+.flex-element-gallery__button {
+  flex-direction: column;
+}
+.flex-element-gallery__button_gallery {
+  width: 100%;
+}
+.flex-element-gallery__button_gallery video {
+  position: relative;
+  top: -5px;
+  right: -5px;
+  justify-content: center;
+  border-radius: 8px;
+  max-height: 360px;
+  max-width: 640px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-element-gallery__button_gallery video:hover {
+  top: 0;
+  right: 0;
+}
+.flex-element-gallery__button_gallery img {
+  position: relative;
+  top: -5px;
+  right: -5px;
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 8px;
+  max-height: 450px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-element-gallery__button_gallery img:hover {
+  top: 0;
+  right: 0;
+}
+.flex-element-gallery__button_ungallery video {
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 8px;
+  max-height: 320px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-element-gallery__button_ungallery img {
+  position: relative;
+  top: -5px;
+  right: -5px;
+  justify-content: center;
+  flex: 1 1 auto;
+  border-radius: 8px;
+  height: 320px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.flex-element-gallery__button_ungallery img:hover {
+  top: 0;
+  right: 0;
+}
+
+footer {
+  flex: 1 0 auto;
+  min-width: 320px;
+  height: 120px;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.Clicker-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.25s 0s ease-in-out;
+  margin: 15px;
+}
+.Clicker-container__Clicker-cover {
+  max-width: 640px;
+  border-radius: 15px;
+  transition: all 0.25s 0s ease-in-out;
+}
+.Clicker-container__Clicker {
+  position: relative;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+  bottom: 10px;
+  left: 10px;
+  transition: all 0.25s 0s ease-in-out;
+  background-image: url("https://cdn.shopify.com/s/files/1/1061/1924/products/Peach_Emoji_large.png?v=1571606034");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.Clicker-container__Clicker:active {
+  bottom: 0;
+  left: 0;
+}
+.Clicker-container__Text {
+  display: flex;
+  min-width: 650px;
+  min-height: 140px;
+  background-color: #d2b7d8;
+  font-weight: bold;
+  color: #412050;
+  position: relative;
+  border-radius: 15px;
+}
+.Clicker-container__Text p {
+  margin: auto;
+  text-align: center;
+  font-size: 50px;
+}
+
+.noner {
+  display: none;
+}
+
+.vid {
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#army {
+  visibility: hidden;
+}

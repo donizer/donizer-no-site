@@ -1,0 +1,163 @@
+.Clicker-container{
+    display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content:space-evenly;
+      align-items: center;
+      transition: all 0.25s 0s ease-in-out;
+      margin: 15px;
+    &__Clicker-cover{
+      display: flex;
+      flex-direction: column;
+      // background-color: rgb(210, 183, 216);
+      max-width: 640px;
+      border-radius: 15px;
+      // box-shadow: 0px 0px 15px rgb(210, 183, 216);
+      transition: all 0.25s 0s ease-in-out;
+      justify-content:center;
+      align-items:center;
+    }
+    // &__Clicker-cover:active{
+    //   box-shadow: 0px 0px 60px rgb(210, 183, 216);
+    // }
+    &__Clicker{
+      position: relative;
+      margin: auto;
+  
+      max-width: 650px;
+      max-height: 650px;
+      border-radius: 15px;
+      bottom: 10px;
+      left: 10px;
+      transition: all 0.25s 0s ease-in-out;
+      // background-color: rgb(239, 209, 245);
+      // background-image: url('https://cdn.shopify.com/s/files/1/1061/1924/products/Peach_Emoji_large.png?v=1571606034');
+      background-repeat: no-repeat;
+      background-size: contain;
+      
+    }
+    &__Text{
+      display: flex;
+      // min-width: 480px;
+      padding: 0 25px 0;
+      min-height: 140px;
+      background-color: rgba(210, 183, 216, 0.89);
+      // background-color: rgb(43, 110, 63);
+      background-size: cover;
+      font-weight: bold;
+      color: rgb(248, 255, 247);
+      position: relative;
+      border-radius: 15px;
+      p{
+        margin: auto;
+  
+        text-align: center;
+        font-size: 50px;
+      }
+      
+    }
+    button{
+      background-color: rgba(127, 255, 212, 0);
+    }
+}
+    
+@media (max-width: 1200px){
+    // .Clicker-container__Clicker{
+  
+    // }
+  }
+@media (max-width: 992px){
+   
+  }
+@media (max-width: 767px){
+    .Clicker-container__Clicker{
+      min-width: none;
+      min-height: none;
+  
+      max-width: 380px;
+      max-height: 380px;
+    }
+    .Clicker-container__Text{
+      min-height: 100px;
+      p{
+        font-size: 34px;
+      }
+    }
+    
+  }
+@media (max-width: 430px){
+    .Clicker-container__Clicker{
+        max-width: 325px;
+        max-height: 325px;
+        margin: 0 0 25%;
+      }
+      .Clicker-container__Text{
+        min-width: none;
+        max-width: 225px;
+        min-height: 100px;
+        p{
+          font-size: 24px;
+        }
+    }
+}
+  
+.povistka-container {
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(49, 36, 36, 0.541);
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  
+    &__item{
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+      background-color: rgb(241, 241, 241);
+      padding: 6px 16px 8px;
+    }
+    
+    &__povistka{
+      // height: 100%;
+      // width: 100%;
+      background-image: url('https://cdn.discordapp.com/attachments/893911666687889418/914194697021440000/unknown.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center; 
+      background-size: auto;
+      
+      &-img{
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    &__button {
+      display: flex;
+      justify-content: space-between;
+      &-cfg{
+        font-size: 25px;
+        padding: 8px;
+        margin: 8px 0 8px;
+        width: 25%;
+        color: rgb(255, 255, 255);
+      }
+      &_1 {
+        background-color: rgb(69, 214, 113);
+      }
+      &_2 {
+        background-color: rgb(196, 36, 76);
+      }
+    }
+}
+  .vid{
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    visibility: hidden;
+    
+}

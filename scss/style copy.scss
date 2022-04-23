@@ -1,0 +1,295 @@
+@import "zero.scss"; // zero style
+@import "gallery_flex_order.scss"; // gallery orders
+body{
+  background-image: url(https://cdn.discordapp.com/attachments/893911666687889418/893920435354370098/league-of-legends-lol-devyatikhvostaya-lisa-ahri-spirit-blossom-splsah-art-8k-oboi-3840x2400_9.jpg);
+  // background-image: url(https://wallpaperaccess.com/download/league-of-legends-ahri-2292668);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  height: 100%;
+  
+}
+.wrapper{
+  flex-direction: column;
+  margin: 0% 15% 0%;
+  min-width: 320px; 
+}
+header{
+  flex-direction: row;
+  // background-color: rgba(235, 132, 245, 0.719);
+  min-width: 320px;
+  min-height: 120px;
+  h1{
+    font-size: 52px;
+    text-align: center;
+    margin: 4%;
+  }
+}
+.mid{
+  flex-direction: row;
+  flex: 1;
+  // background-color: rgba(255, 176, 248, 0.719);
+    
+}
+.flex-upper-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: baseline;
+ 
+  &__item{
+    order: 1;
+    margin: 7.5px;
+    background-color: rgba(246, 85, 192, 0.719);
+    border-radius: 8px;
+    // transition: all 0.5s 0s ease-in-out;
+    p{
+      display: block;
+      min-height: 32px;
+      display: block;
+      font-size: 200%;
+      text-align: center;
+    }
+  }
+  &__button{
+    flex-direction: column;
+    &_gallery{
+      width: 100%;
+      video{
+        position: relative;
+        top: -5px;
+        right: -5px;
+
+        justify-content: center;
+        border-radius: 8px;
+        max-height: 360px;
+        max-width: 640px;
+        transition: all 0.25s 0s ease-in-out;
+      }
+      video:hover{
+        top: 0;
+        right: 0;
+      }
+      img{
+        position: relative;
+        top: -5px;
+        right: -5px;
+
+        justify-content: center;
+        flex: 1 1 auto;
+        border-radius: 8px;
+        max-height: 450px;
+        transition: all 0.25s 0s ease-in-out;
+      }
+      img:hover{
+        top: 0;
+        right: 0;
+      }
+    }
+    &_ungallery{
+      video{
+        justify-content: center;
+        flex: 1 1 auto;
+        border-radius: 8px;
+        max-height: 320px;
+        transition: all 0.25s 0s ease-in-out;
+      }
+      img{
+        position: relative;
+        top: -5px;
+        right: -5px;
+
+        justify-content: center;
+        flex: 1 1 auto;
+        border-radius: 8px;
+        height: 320px;
+        transition: all 0.25s 0s ease-in-out;
+      }
+      img:hover{
+        top: 0;
+        right: 0;
+      }
+    }           
+  }
+}
+
+.flex-element-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: baseline;
+  transition: all 0.25s 0s ease-in-out;
+  &__item{
+    order: 1;
+    margin: 7.5px;
+    background-color: rgba(246, 85, 192, 0.719);
+    border-radius: 8px;
+    // transition: all 0.5s 0s ease-in-out;
+    p{
+      display: block;
+      min-height: 32px;
+      display: block;
+      font-size: 200%;
+      text-align: center;
+    }
+  }
+  &__button{
+    flex-direction: column;
+    &_gallery{
+      width: 100%;
+      video{
+        position: relative;
+        top: -5px;
+        right: -5px;
+
+        
+        justify-content: center;
+        border-radius: 8px;
+        max-height: 360px;
+        max-width: 640px;
+        transition: all 0.25s 0s ease-in-out;
+
+      }
+      video:hover{
+        top: 0;
+        right: 0;
+      }
+      img{
+        position: relative;
+        top: -5px;
+        right: -5px;
+
+        justify-content: center;
+        flex: 1 1 auto;
+        border-radius: 8px;
+        max-height: 450px;
+        transition: all 0.25s 0s ease-in-out;
+      }
+      img:hover{
+        top: 0;
+        right: 0;
+      }
+    }
+    &_ungallery{
+      video{
+        justify-content: center;
+        flex: 1 1 auto;
+        border-radius: 8px;
+        max-height: 320px;
+        transition: all 0.25s 0s ease-in-out;
+      }
+      img{
+        position: relative;
+        top: -5px;
+        right: -5px;
+
+        justify-content: center;
+        flex: 1 1 auto;
+        border-radius: 8px;
+        height: 320px;
+        transition: all 0.25s 0s ease-in-out;
+      }
+      img:hover{
+        top: 0;
+        right: 0;
+      }
+    }           
+  }
+}
+
+footer{
+  // background-color: rgba(0, 255, 255, 0.609);
+  // border: solid red;
+  flex: 1 0 auto;
+  // background-color: rgba(87, 70, 240, 0.719);
+  min-width: 320px;
+  height: 120px;
+}
+p{
+  font-size: 18px;
+  text-align: center;
+}
+h2{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.Clicker-container{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    transition: all 0.25s 0s ease-in-out;
+    margin: 15px;
+  &__Clicker-cover{
+    // background-color: rgb(210, 183, 216);
+    max-width: 640px;
+    border-radius: 15px;
+    // box-shadow: 0px 0px 15px rgb(210, 183, 216);
+    transition: all 0.25s 0s ease-in-out;
+  }
+  // &__Clicker-cover:active{
+  //   box-shadow: 0px 0px 60px rgb(210, 183, 216);
+  // }
+  &__Clicker{
+    position: relative;
+    margin: auto;
+
+    
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    bottom: 10px;
+    left: 10px;
+    transition: all 0.25s 0s ease-in-out;
+    // background-color: rgb(239, 209, 245);
+    background-image: url('https://cdn.shopify.com/s/files/1/1061/1924/products/Peach_Emoji_large.png?v=1571606034');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    
+  }
+  &__Clicker:active{
+    bottom: 0;
+    left: 0;
+  }
+  &__Text{
+    display: flex;
+    min-width: 650px;
+    min-height: 140px;
+    background-color: rgb(210, 183, 216);
+    // background-color: rgb(43, 110, 63);
+
+    font-weight: bold;
+    color: rgb(65, 32, 80);
+    position: relative;
+    border-radius: 15px;
+    p{
+      margin: auto;
+
+      text-align: center;
+      font-size: 50px;
+    }
+  }
+}
+
+.noner{
+  display: none;
+}
+
+.vid{
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#army{
+  visibility: hidden;
+}
