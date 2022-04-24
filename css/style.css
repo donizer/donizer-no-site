@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background: no-repeat url(https://i.imgur.com/dhJQ5kJ.jpg);
+  background: no-repeat url("/media/images/Ahri_square.jpg");
   background-size: cover;
   background-position: 50% 25%;
   background-attachment: fixed;
@@ -85,7 +85,7 @@ body {
 
 @media (max-width: 767px) {
   body {
-    background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg);
+    background: no-repeat url("/media/images/Ahri_portrait.jpg");
     background-size: cover;
     background-position: 50% 25%;
     background-attachment: fixed;
@@ -178,7 +178,7 @@ header nav .navMenu__nav-item {
   }
 }
 header nav .BackgroundRed {
-  background: red;
+  background: rgba(255, 0, 0, 0.74);
 }
 header nav .flex_grow {
   flex-grow: 1;
