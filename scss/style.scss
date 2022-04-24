@@ -8,7 +8,7 @@ body{
     
     background: no-repeat url(https://i.imgur.com/dhJQ5kJ.jpg); 
     // background:rgb(185, 26, 159);
-    background-size: 105% auto;
+    background-size: cover;
     background-position: 50% 25%;
     background-attachment: fixed;
     display: flex;
@@ -17,7 +17,7 @@ body{
 @media (max-width: 767px) {
     body{
         background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg); 
-        background-size: auto 115%;
+        background-size: cover;
         background-position: 50% 25%;
         background-attachment: fixed;
     }
