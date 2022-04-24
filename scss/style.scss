@@ -8,8 +8,9 @@ body{
     
     background: no-repeat url(https://i.imgur.com/dhJQ5kJ.jpg); 
     // background:rgb(185, 26, 159);
-    background-size: auto;
+    background-size: 100% auto;
     background-position: 50% 25%;
+    background-attachment: fixed;
     display: flex;
     justify-content:center;
 }

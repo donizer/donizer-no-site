@@ -76,8 +76,9 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background: no-repeat url(https://i.imgur.com/dhJQ5kJ.jpg);
-  background-size: auto;
+  background-size: 100% auto;
   background-position: 50% 25%;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
 }
