@@ -74,6 +74,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+html {
+  background-color: #8362df;
+}
+
 body {
   background-color: #8362df;
   background: no-repeat url("/media/images/Ahri_square.jpg");
