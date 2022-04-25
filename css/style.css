@@ -75,10 +75,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  background: no-repeat url("/media/images/Ahri_square.jpg");
   background: no-repeat url(https://i.imgur.com/dhJQ5kJ.jpg);
   background-size: cover;
   background-position: 50% 25%;
   background-attachment: fixed;
+  flex-grow: 1;
+  height: auto;
   display: flex;
   justify-content: center;
 }
@@ -94,12 +97,11 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 2;
   max-width: 1180px;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
-
 @media (max-width: 1200px) {
   .wrapper {
     max-width: 840px;
@@ -120,11 +122,13 @@ body {
     max-width: 500px;
   }
 }
+
 .header {
   width: 100%;
   display: flex;
   top: 0;
   position: sticky;
+  height: 80px;
   z-index: 3;
 }
 .header:before {
@@ -327,4 +331,9 @@ body {
 
 .flex_right {
   align-self: flex-end;
+}
+
+.f123f {
+  color: #000;
+  font-size: 2px;
 }
