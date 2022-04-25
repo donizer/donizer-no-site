@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background: no-repeat url(https://i.imgur.com/dhJQ5kJ.jpg);
+  background: #b91a9f;
   background-size: cover;
   background-position: 50% 25%;
   background-attachment: fixed;
@@ -85,7 +85,7 @@ body {
 
 @media (max-width: 767px) {
   body {
-    background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg);
+    background: #1cbbc0;
     background-size: cover;
     background-position: 50% 25%;
     background-attachment: fixed;
@@ -125,17 +125,6 @@ body {
   display: flex;
   top: 0;
   position: sticky;
-  z-index: 3;
-}
-.header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(131, 98, 223, 0.95);
-  z-index: 3;
 }
 .header__container {
   max-width: 1180px;
@@ -148,14 +137,8 @@ body {
   width: 100%;
   height: 80px;
 }
-@media (max-width: 767px) {
-  .header__body {
-    height: 60px;
-  }
-}
 .header__logo {
-  z-index: 5;
-  background: rgba(145, 7, 179, 0.95);
+  background: #fbff00;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,22 +149,19 @@ body {
   max-width: 170px;
   padding: 0 5px 0 0;
   font-size: 30px;
-  color: white;
   font-weight: 900;
   text-align: end;
 }
 @media (max-width: 767px) {
   .header h1 {
     font-size: 24px;
-    max-width: 120px;
   }
 }
 .header__burger {
-  z-index: 5;
   display: none;
 }
 .header__menu {
-  z-index: 5;
+  background: #48ff00;
   display: flex;
   justify-content: space-between;
   max-height: 100%;
@@ -189,7 +169,23 @@ body {
 .header__menu-last {
   max-width: 170px;
 }
+@media (max-width: 767px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .header__burger:before, .header__burger:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    height: 2px;
+    left: 0;
+  }
+}
 .header__list {
+  background: #00f7ff;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -197,6 +193,7 @@ body {
   align-items: center;
 }
 .header__link {
+  background: #001aff;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -204,83 +201,7 @@ body {
   padding: 0 -2.5px 0;
   min-width: 80px;
   height: 45px;
-  font-weight: 600;
   font-size: 24px;
-  color: white;
-}
-.header__list li {
-  width: 100%;
-}
-@media (max-width: 767px) {
-  .header__menu {
-    z-index: 0;
-    position: fixed;
-    display: block;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 70px 10px 20px 10px;
-    transition: all 0.3s ease 0s;
-  }
-  .header__menu.active {
-    top: 0;
-  }
-  .header__list {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.85);
-  }
-  .header__list li {
-    margin: 0 0 20px 0;
-  }
-  .header__list li a {
-    justify-content: end;
-    padding: 0 5px 0;
-    color: #000;
-  }
-  .header__burger {
-    display: block;
-    position: relative;
-    margin: auto 0 auto;
-    width: 20px;
-    height: 20px;
-    right: 25px;
-  }
-  .header__burger span {
-    position: absolute;
-    background-color: #fff;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 45%;
-    transition: all 0.3s ease 0s;
-  }
-  .header__burger:before, .header__burger:after {
-    content: "";
-    background-color: #fff;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    transition: all 0.3s ease 0s;
-  }
-  .header__burger:before {
-    top: 0;
-  }
-  .header__burger:after {
-    bottom: 0;
-  }
-  .header__burger.active span {
-    transform: scale(0);
-  }
-  .header__burger.active:before {
-    transform: rotate(45deg);
-    top: 45%;
-  }
-  .header__burger.active:after {
-    transform: rotate(-45deg);
-    bottom: 45%;
-  }
 }
 @media (max-width: 767px) {
   .header__link {
@@ -298,14 +219,10 @@ body {
   line-height: 20px;
 }
 .mid p {
-  margin: 0 10px 5px 10px;
+  background-color: rgba(98, 226, 115, 0.795);
+  margin: 0 10px 25px 10px;
   text-align: justify;
   text-indent: 50px;
-}
-@media (max-width: 767px) {
-  .mid.lock {
-    overflow: hidden;
-  }
 }
 
 .center {
@@ -326,4 +243,24 @@ body {
 
 .flex_right {
   align-self: flex-end;
+}
+
+.burger-test {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .burger-test {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 30px;
+  }
+  .burger-test:before, .burger-test:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+  }
 }
