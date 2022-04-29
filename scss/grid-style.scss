@@ -1,0 +1,151 @@
+@import "_zero";
+
+/* Zero style ends*/
+
+body{
+	background-color: rgb(49, 49, 49);
+	color: rgb(255, 255, 255);
+}
+
+.grid-wrapper {
+	display: grid;
+	min-height: 100vh;
+	grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+.grid-header {
+	grid-area: header;
+	padding: 15px;
+	background-color: #794f45;
+	align-items: center;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+
+
+		&__logo {
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background-color: #fff;
+			grid-column: 2 / 3;
+		}
+
+		&__menu {
+			grid-column: 3 / 4;
+		}
+
+		&__list {
+			display: grid;
+			grid-auto-flow: column;
+			justify-items: end;
+			/* justify-content: end; */
+		}
+
+		&__list li {
+			margin: 0px 0px 0px 20px;
+		}
+
+		&__link {
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 14px;
+			text-decoration: none;
+		}
+
+		&__burger {
+		}
+
+		@media (max-width: 767px) {
+			.header__menu {
+				display: none;
+			}
+		}
+}
+.grid-main {
+	padding: 30px 15px;
+	
+}
+.grid-sidebar {
+	background-color: #7a956b;
+	padding: 20px;
+	margin: 0px 0px 30px 0px;
+	
+		&__list {
+		}
+		
+		&__list li{
+			margin: 0px 0px 15px 0px;
+		}
+
+		&__link {
+		}
+}
+
+
+.grid-contnet {
+		&__title {
+		}
+}
+
+.grid-contnet-gallery {
+	margin: 0px 0px 40px 0px;
+}
+
+@media (min-width: 992px) {
+	.main {
+		grid-area: main;
+		display: grid;
+		grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+	}
+	.content {
+		grid-column: 3 / 4;
+		padding: 0px 0px 0px 30px;
+	}
+	.sidebar {
+		margin: 0;
+		grid-column: 2 / 3;
+	}
+}
+
+.grid-gallery {
+
+		&__title {
+		}
+
+		&__items {
+			display: grid;
+			gap: 10px;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		
+		}
+
+		&__item {
+			background-color: #794f45;
+			padding: 0px 0px 85% 0px;
+			position: relative;
+		}
+
+		&__item img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		@media (min-width: 800px) {
+			.gallery__item_big {
+				grid-column: span 2;
+				grid-row: span 2;
+			}
+		}
+}
+
+.grid-footer {
+	background-color: #77608d;
+}
+
+
