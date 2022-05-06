@@ -2,9 +2,14 @@
 
 
 body{
-	background-color: rgb(131, 98, 223);
-	background: no-repeat url('/media/images/Ahri_square.jpg');
-	background: no-repeat url(https://i.imgur.com/dhJQ5kJ.jpg);
+
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    
+
+	// background-color: rgb(131, 98, 223);
+	// background: no-repeat url('https://donizer.github.io/donizer-no-site/media/images/Ahri_square.jpg');
+	// background: no-repeat url(https://i.imgur.com/dhJQ5kJ.jpg);
 	background-size: cover;
 	background-position: 50% 25%;
 	background-attachment: fixed;
@@ -17,7 +22,8 @@ body{
 }
 @media (max-width: 767px) {
 	body{
-		background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg);
+		// background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg);
+        // background: no-repeat url('https://donizer.github.io/donizer-no-site/media/images/Ahri_portrait.jpg');
 		// background:rgb(28, 187, 192); 
 		background-size: cover;
 		background-position: 50% 25%;
@@ -44,14 +50,20 @@ body{
     z-index: 1;
 
 
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     
-    background: rgba(131, 98, 223, 0.95); //debug
+    
+
+    // background: rgba(131, 98, 223, 0.95); //debug
+
+    
         width: 100%;
         min-height: 50px;
 
-        box-shadow: 0px 0px 55px rgb(131, 98, 223);
+        box-shadow: 0px 0px 55px linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     
-
+        
 
 		&__container {
             display: flex;
@@ -221,8 +233,14 @@ body{
     display: none;
 }
 .footer {
-    background-color: rgba(75, 157, 189, 0.95);
-    box-shadow: 0px 0px 55px rgb(75, 157, 189);
+
+    background-color: #21D4FD;
+    background-image: linear-gradient(-195deg, #4158D0 0%, #C850C0 100%);
+
+
+
+    // background-color: rgba(75, 157, 189, 0.95);
+    box-shadow: 0px 55px 155px #21D4FD;
 
     min-height: 50px;
 }
