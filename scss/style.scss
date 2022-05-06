@@ -10,6 +10,7 @@ body{
 	background-attachment: fixed;
 	flex-grow: 1;
 	height: auto;
+    
 
 	display: flex;
 	justify-content:center;
@@ -30,6 +31,8 @@ body{
     flex-direction: column;
     min-height: 100vh;
 
+    
+
     // transition: all 0.3s ease;
 }
 .header {
@@ -37,6 +40,8 @@ body{
     min-height: 50px;
     position: sticky;
     top: 0;
+
+    z-index: 1;
 
 
     
@@ -104,15 +109,20 @@ body{
 		&__list {
             display: flex;
             
+            li{
+                border-radius: 3px;
+            }
             
 		}
         &__list a{
             transition: all 0.2s ease 0s;
+            
         }
         &__list a:hover{
             text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
         }
 		&__link {
+            
 
             
             color: rgb(255, 255, 255);
@@ -128,6 +138,8 @@ body{
     display: flex;
     position: fixed;
 
+    z-index: 1;
+
     width: 100%;
     min-height: 50px;
     justify-content: space-between;
@@ -142,7 +154,7 @@ body{
     display: flex;
     flex-grow: 1;
     
-
+    
 }
 
 .aside {
@@ -170,14 +182,20 @@ body{
     display: flex;
     flex-direction: column;
 
+    
+
     position: relative;
     justify-content: start;
 
-    div {
+    &-body{
      
-        padding: 15px;
+        padding: 7px 10px;
 
-        
+        // overflow: hidden;
+
+        p{
+            text-align: justify;
+        }
     }
 
 }
@@ -197,6 +215,10 @@ body{
 
 @media (max-width: 1025px){
 
+    body.lock{
+        overflow: hidden;
+    }
+
     .header{
         // position: relative;
         &__burger{
@@ -206,6 +228,8 @@ body{
 			width: 20px;
 			height: 20px;
 			right: 25px;
+
+            z-index: 1;
 			& span{
 				position: absolute;
 				background-color: #fff;
@@ -249,6 +273,8 @@ body{
             bottom: 45%;
         }
         &__menu {
+
+            
             background-color: rgba(255, 255, 255, 0);
 
             font-size: 24px;
@@ -290,10 +316,16 @@ body{
     }
     .burger-container{
 
+
+
         background-color: #fff;
+
+
 
         display: flex;
         flex-direction: column;
+
+        overflow: auto;
 
         justify-content: space-between;
 
@@ -315,6 +347,7 @@ body{
  
     }
     .burger-container.active{
+        
         right: 0;
     }
     .list{
@@ -353,8 +386,14 @@ body{
 
         flex-direction: column;
         flex-wrap: wrap;
+        
 
+        
+        &.lock{
+            overflow: hidden;
+        }
     }
+    
 
     .content{
         order: -1;
@@ -367,29 +406,38 @@ body{
     .list__item-0{
         display: none;
     }
-}
 
 
-.shade{
-    position: fixed;
-
-    width: 100vw;
-    height: 100vh;
-
-    top: 0;
-    right: 0;
-    transition: all 0.1s ease 0s, background-color 0.7s ease 0s, transform 0s ease 0s;
-    background-color: rgba(255, 255, 255, 0);
-    z-index: 0;
-    display: hidden;
-    transform: scale(0);
+    .shade{
+        position: fixed;
     
+        width: 100vw;
+        height: 100vh;
+    
+        top: 0%;
+        right: 0%;
+        transition: all 0.2s ease 0s, background-color 0.7s ease 0s, transform 0s ease 0s;
+        background-color: rgba(255, 255, 255, 0);
+    
+        display: hidden;
+        transform: scale(0);
+        
+    }
+    .shade.active{
+        background-color: rgba(255, 255, 255, 0.333);
+        display: block;
+        
+    
+        z-index: 0;
+        transform: scale(10);
+    }
+
+
 }
-.shade.active{
-    background-color: rgba(255, 255, 255, 0.333);
-    display: block;
-    transform: scale(10);
-}
+
+
+
+
 
 
 

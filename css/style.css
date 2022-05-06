@@ -105,6 +105,7 @@ body {
   min-height: 50px;
   position: sticky;
   top: 0;
+  z-index: 1;
   background: rgba(131, 98, 223, 0.95);
   width: 100%;
   min-height: 50px;
@@ -143,6 +144,9 @@ body {
 .header__list {
   display: flex;
 }
+.header__list li {
+  border-radius: 3px;
+}
 .header__list a {
   transition: all 0.2s ease 0s;
 }
@@ -156,6 +160,7 @@ body {
 .burger-container {
   display: flex;
   position: fixed;
+  z-index: 1;
   width: 100%;
   min-height: 50px;
   justify-content: space-between;
@@ -192,8 +197,11 @@ body {
   position: relative;
   justify-content: start;
 }
-.content div {
-  padding: 15px;
+.content-body {
+  padding: 7px 10px;
+}
+.content-body p {
+  text-align: justify;
 }
 
 .burger-body {
@@ -209,6 +217,10 @@ body {
 }
 
 @media (max-width: 1025px) {
+  body.lock {
+    overflow: hidden;
+  }
+
   .header__burger {
     display: block;
     position: relative;
@@ -216,6 +228,7 @@ body {
     width: 20px;
     height: 20px;
     right: 25px;
+    z-index: 1;
   }
   .header__burger span {
     position: absolute;
@@ -277,6 +290,7 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    overflow: auto;
     justify-content: space-between;
     position: fixed;
     top: 50px;
@@ -309,6 +323,9 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
   }
+  .main.lock {
+    overflow: hidden;
+  }
 
   .content {
     order: -1;
@@ -321,26 +338,26 @@ body {
   .list__item-0 {
     display: none;
   }
-}
-.shade {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  transition: all 0.1s ease 0s, background-color 0.7s ease 0s, transform 0s ease 0s;
-  background-color: rgba(255, 255, 255, 0);
-  z-index: 0;
-  display: hidden;
-  transform: scale(0);
-}
 
-.shade.active {
-  background-color: rgba(255, 255, 255, 0.333);
-  display: block;
-  transform: scale(10);
-}
+  .shade {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    right: 0%;
+    transition: all 0.2s ease 0s, background-color 0.7s ease 0s, transform 0s ease 0s;
+    background-color: rgba(255, 255, 255, 0);
+    display: hidden;
+    transform: scale(0);
+  }
 
+  .shade.active {
+    background-color: rgba(255, 255, 255, 0.333);
+    display: block;
+    z-index: 0;
+    transform: scale(10);
+  }
+}
 .none {
   display: none;
 }
