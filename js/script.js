@@ -8,3 +8,7 @@ $(document).ready(function(){
         .toggleClass('lock');
     });
 });
+
+
+
+$('.header__burger').css({'cursor': 'pointer'});
