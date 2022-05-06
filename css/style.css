@@ -289,15 +289,16 @@ body {
 
   .burger-container {
     background-color: #fff;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    overflow: auto;
     justify-content: space-between;
-    position: fixed;
+    overflow: auto;
+    overflow-x: hidden;
     top: 50px;
+    right: -100%;
     max-width: 250px;
     height: 100vh;
-    right: -100%;
     padding: 15px;
     padding-bottom: 70px;
     transition: right 0.333s ease 0s;
