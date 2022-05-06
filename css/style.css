@@ -138,9 +138,6 @@ body {
   font-size: 28px;
   font-weight: 600;
 }
-.header__menu li {
-  margin: 0 15px;
-}
 .header__list {
   display: flex;
 }
@@ -276,6 +273,10 @@ body {
     text-align: center;
     padding: 10px;
     box-shadow: 0px 2px 7.5px rgba(0, 0, 0, 0.3);
+  }
+  .header__menu .menu-filler {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0px 2px 7.5px rgba(0, 0, 0, 0);
   }
   .header__list {
     display: flex;
