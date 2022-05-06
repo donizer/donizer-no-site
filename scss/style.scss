@@ -97,6 +97,7 @@ body{
             
             min-width: 86px;
 
+            
 
             font-size: 28px;
             font-weight: 600;
@@ -107,7 +108,23 @@ body{
             
             li{
                 border-radius: 3px;
+                margin: 0 10px;
+                transition: all 2s ease 0s;
+
+                a{
+                    display: block;
+                    
+                    
+                }
+
+                a:hover{
+                   text-decoration: underline 3px;
+                    
+
+    
+                }
             }
+            
 
 
             
@@ -291,9 +308,17 @@ body{
                 width: 100%;
                 text-align: center;
 
-                padding: 10px;
+                
+                // padding: 10px;
+
                 box-shadow: 0px 2px 7.5px rgba(0, 0, 0, 0.3);
                 
+                a{
+                    display: block;
+                    // background-color: #fff;
+                    // margin: 10px;
+                    padding: 10px;
+                }
             }
             .menu-filler{
                 background-color: rgba(0, 0, 0, 0); //pointer
@@ -433,6 +458,18 @@ body{
 
 
 }
+
+
+.unselectable {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version, currently
+									not supported by any browser */
+}
+
 
 
 

@@ -143,6 +143,15 @@ body {
 }
 .header__list li {
   border-radius: 3px;
+  margin: 0 10px;
+  transition: all 2s ease 0s;
+}
+.header__list li a {
+  display: block;
+}
+.header__list li a:hover {
+  -webkit-text-decoration: underline 3px;
+          text-decoration: underline 3px;
 }
 .header__list a {
   transition: all 0.2s ease 0s;
@@ -271,8 +280,11 @@ body {
     background-color: rgba(0, 0, 0, 0.15);
     width: 100%;
     text-align: center;
-    padding: 10px;
     box-shadow: 0px 2px 7.5px rgba(0, 0, 0, 0.3);
+  }
+  .header__menu li a {
+    display: block;
+    padding: 10px;
   }
   .header__menu .menu-filler {
     background-color: rgba(0, 0, 0, 0);
@@ -360,6 +372,19 @@ body {
     transform: scale(10);
   }
 }
+.unselectable {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  /* Konqueror */
+  /* Firefox */
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  not supported by any browser */
+}
+
 .none {
   display: none;
 }
