@@ -11,4 +11,6 @@ $(document).ready(function(){
 
 
 
+
 $('.header__burger').css({'cursor': 'pointer'});
+

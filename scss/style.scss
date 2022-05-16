@@ -264,7 +264,7 @@ body{
         margin: 15px;
         padding: 15px;
         border-radius: 10px;
-        transition: all 0.3s ease 0s;
+        transition: all 0.333s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
         
     }
     &__body:hover{
@@ -279,6 +279,7 @@ body{
         max-width: 250px;
         
         margin: 0 0 15px;
+        transition: all 0.3s ease 0s;
         
         img{
             border-radius: 10px;
@@ -287,11 +288,6 @@ body{
             object-fit: cover;
             transform: scale(1);
             
-        }
-        img:hover{
-            border-radius: 0px;
-            object-fit: contain;
-            transform: scale(1.4);
         }
     }
 
