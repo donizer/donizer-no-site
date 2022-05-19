@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>donizer's site</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" href="media/ico/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="shortcut icon" href="../media/ico/favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	</head>
 
@@ -15,7 +15,7 @@
                 <div class="header__container">
 
                     <div class="header__body">
-                        <a href="index.html" class="header__logo">
+                        <a href="../index.html" class="header__logo">
                             <h1>
                                 donizer's site
                             </h1>
@@ -31,13 +31,13 @@
                             <div class="header__menu">
                                 <ul class="header__list list__item-1">
                                     <li>
-                                        <a href="index.html" class="header__link">Home</a>
+                                        <a href="../index.html" class="header__link">Home</a>
                                     </li>
                                     <li>
-                                        <a href="gallery.html" class="header__link">Gallery</a>
+                                        <a href="../gallery.html" class="header__link">Gallery</a>
                                     </li>
                                     <li>
-                                        <a href="polygon.html" class="header__link">Polygon</a>
+                                        <a href="../polygon.html" class="header__link">Polygon</a>
                                     </li>
                                 </ul>
                             </div>
@@ -65,24 +65,15 @@
 
 
 
-            <div class="main">
+            <div id="main" class="main">
 
                 <div class="aside aside-1">
                     
                 </div>
                 <div class="content">
-                    <div class="card__container">
-                        <div class="card__body">
-                            <a href="main/r34.html" class="card__image">
-                                <img src="media/images/Ahri_square.jpg" alt="">
-                            </a>
-                            <div class="card__description">
-                                <p>
-                                    <a href="main/r34.html" class="card__link">r34</a>
-                                    
-                                </p>
-                            </div>
-                        </div>
+                    
+                    <div id="CardContainer" class="card__container r34">
+
                     </div>
                     
                 </div>
@@ -105,8 +96,13 @@
         </div> <!-- end wrapper -->
 
         <div class="shade"></div>
+        
 	</body>
 
-    <script src="js/jquery-3.6.0.js"></script>
-	<script src="js/script.js"></script>
+    <script src="../js/jquery-3.6.0.js"></script>
+	<script src="../js/script.js"></script>
+
+    <script src="../js/posts.json"></script>
+    <script src="../js/r34.js"></script>
+    
 </html>

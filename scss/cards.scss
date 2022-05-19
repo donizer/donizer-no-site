@@ -1,0 +1,127 @@
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    
+
+
+    &__container {
+        
+        display: flex;
+        flex-grow: 1;
+
+        margin: 45px 0 0;
+        
+        // background-color: #fff;
+        justify-content:space-evenly;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        transition: all 0.3s ease 0s;
+    }
+	&__container.r34 {
+		margin: 25px 0 0;
+	}
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: max-content;
+        background-color: #c441d0;
+        // background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 150%);
+    
+        // min-height: 380px;
+		max-height: 450px;
+        justify-content: space-between;
+
+        margin: 10px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: all 0.333s cubic-bezier(.22,.68,0,1.71) 0s;
+    }
+    &__body:hover{
+        background-color: #fbda61;
+        box-shadow: 0px 0px 55px #ecc948;
+        transform: scale(1.05);
+        // background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    }
+	&__body.r34{
+		padding: 0px;
+		background-color: none;
+	}
+	&__body.r34:hover{
+		// padding: 2.5px;
+        background-color: #fbda61;
+        box-shadow: 0px 0px 15px #ecc848;
+        transform: scale(1.035);
+        // background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    }
+
+    &__image {
+        height: 350px;
+        max-width: 250px;
+
+        transition: all 0.3s ease 0s;
+        
+        img{
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.822);
+        flex-grow: 1;
+        justify-content: center;
+
+        max-height: 90px;
+
+        overflow: hidden;
+
+		        
+        margin: 15px 0 0;
+        padding: 0 0 5px;
+        border-radius: 5px; 
+
+        
+        p{
+            font-weight: 700;
+            display: flex;
+            font-size: 28px;
+            text-align: center;
+            max-width: 250px;
+            text-align: center;
+			height: 100%;
+            
+        }
+
+       
+    }
+	&__link{
+		display: flex;
+
+		width: 100%;
+		height: 100%;
+
+		justify-content: center;
+		align-items: center;
+
+		font-weight: 700;
+		display: flex;
+		font-size: 28px;
+		text-align: center;
+		max-width: 250px;
+		height: 100%;	
+		
+	}
+
+}
+
