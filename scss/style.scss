@@ -3,28 +3,45 @@
 @import "r34";
 
 
-html{
+// html{
+//     background-color: #4158D0;
+//     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+//     background-size: cover;
+// 	background-position: 50% 25%;
+// 	background-attachment: fixed;
+	
+// }
+// @media (max-width: 767px) {
+// 	html{
+// 		// background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg);
+//         // background: no-repeat url('https://donizer.github.io/donizer-no-site/media/images/Ahri_portrait.jpg');
+// 		// background:rgb(28, 187, 192); 
+// 		background-size: cover;
+// 		background-position: 50% 25%;
+// 		background-attachment: fixed;
+// 	}
+// }
+
+.backgroundAbs{
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     background-size: cover;
 	background-position: 50% 25%;
 	background-attachment: fixed;
-	flex-grow: 1;
-	height: auto;
-}
-@media (max-width: 767px) {
-	html{
-		// background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg);
-        // background: no-repeat url('https://donizer.github.io/donizer-no-site/media/images/Ahri_portrait.jpg');
-		// background:rgb(28, 187, 192); 
-		background-size: cover;
-		background-position: 50% 25%;
-		background-attachment: fixed;
-	}
 }
 
 body{
-
+    
     
 
 	// background-color: rgb(131, 98, 223);
@@ -35,6 +52,8 @@ body{
 
 	display: flex;
 	justify-content:center;
+    flex-grow: 1;
+	height: auto;
 }
 
 
