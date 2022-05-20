@@ -83,8 +83,10 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+
     
     $('.card__image-src, .r34previewer').click(function(event){
+        $(`.r34previewer-src`).attr("src", `#`);
 
         $('.card__body, .r34previewer')
         .toggleClass('active');
@@ -110,7 +112,7 @@ $(document).ready(function(){
                 // console.log(data[x].file_url); //url
                 // console.log(data[x].score); //score
                 
-                $(`.r34previewer-src`).attr("src", `#`);
+                
                 $(`.r34previewer-src`).attr("alt", `${data[r34id].file_url}`);
                 $(`.r34previewer-src`).attr("src", `${data[r34id].file_url}`);
                 
