@@ -194,7 +194,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .r34previewer.active img {
   width: auto;
-  height: 85vh;
+  max-width: 100vw;
+  max-height: 85vh;
   transform: scale(1);
 }
 
