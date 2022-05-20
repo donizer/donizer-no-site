@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-grow: 1;
   max-width: max-content;
   background-color: #c441d0;
-  max-height: 450px;
+  max-height: 400px;
   justify-content: space-between;
   margin: 10px;
   padding: 15px;
@@ -113,6 +113,8 @@ h1, h2, h3, h4, h5, h6 {
 .card__body.r34 {
   padding: 0px;
   background-color: none;
+  max-height: 450px;
+  min-width: 250px;
 }
 .card__body.r34:hover {
   background-color: #fbda61;
@@ -165,6 +167,35 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   max-width: 250px;
   height: 100%;
+}
+
+.r34previewer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  right: 0%;
+  transition: background-color 0.2s ease 0s, background-color 0.7s ease 0s, transform 0s ease 0s;
+  background-color: rgba(255, 255, 255, 0);
+  display: hidden;
+  z-index: -1;
+}
+.r34previewer img {
+  width: 0;
+  transform: scale(0);
+}
+
+.r34previewer.active {
+  background-color: rgba(0, 0, 0, 0.333);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+.r34previewer.active img {
+  width: auto;
+  height: 85vh;
+  transform: scale(1);
 }
 
 body {
