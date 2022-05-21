@@ -78,7 +78,7 @@ for(let x = 0; x <= maxValue; x++){
         if(event.target.id == undefined){
 
         }
-
+        window.location.replace("https://donizer.github.io/donizer-no-site/media/video/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4");
         var r34id = event.target.id.slice(6);
         
         $(`.r34previewer-img`).attr("src", `#`);
@@ -148,6 +148,7 @@ document.getElementsByClassName('card__image-src, lazyload').onclick = function 
     if(rolls=1){
         document.getElementById('nevergonnagiveyouup').play();
         document.getElementById('nevergonnagiveyouup').classList.add('test')
+        
     }
     
 };
@@ -162,7 +163,7 @@ $(document).ready(function(){
 });
 
 
-// window.location.replace("http://stackoverflow.com");
+
 
 
 
