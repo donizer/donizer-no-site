@@ -141,10 +141,15 @@ for(let x = 0; x <= maxValue; x++){
     });
 // });
 
+let rolls = 0;
 
 document.getElementsByClassName('card__image-src').onclick = function () {
-    document.getElementById('nevergonnagiveyouup').play();
-    document.getElementById('nevergonnagiveyouup').classList.add('test')
+    rolls++;
+    if(rolls=1){
+        document.getElementById('nevergonnagiveyouup').play();
+        document.getElementById('nevergonnagiveyouup').classList.add('test')
+    }
+    
 };
 
 $(document).ready(function(){
