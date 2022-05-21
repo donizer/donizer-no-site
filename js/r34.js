@@ -143,7 +143,7 @@ for(let x = 0; x <= maxValue; x++){
 
 let rolls = 0;
 
-document.getElementsByClassName('card__image-src').onclick = function () {
+document.getElementsByClassName('card__image-src, lazyload').onclick = function () {
     rolls++;
     if(rolls=1){
         document.getElementById('nevergonnagiveyouup').play();
@@ -162,7 +162,7 @@ $(document).ready(function(){
 });
 
 
-
+// window.location.replace("http://stackoverflow.com");
 
 
 
