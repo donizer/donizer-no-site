@@ -94,30 +94,31 @@ for(let x = 0; x <= maxValue; x++){
             
 
 
-            if(data[r34id].type == "image"){
-                console.log(data[r34id].type);
+            // if(data[r34id].type == "image"){
+            //     console.log(data[r34id].type);
 
-                $(`.r34previewer-vid`).attr("style", `display: none`);
-                $(`.r34previewer-img`).attr("style", `display: block`);
+            //     $(`.r34previewer-vid`).attr("style", `display: none`);
+            //     $(`.r34previewer-img`).attr("style", `display: block`);
 
-                // $(`.r34previewer-img`).attr("alt", `${data[r34id].sample_url}`);
-                $(`.r34previewer-img`).attr("src", `${data[r34id].sample_url}`);
-            }
-            else if(data[r34id].type == "video"){
-                console.log(data[r34id].type);
+            //     // $(`.r34previewer-img`).attr("alt", `${data[r34id].sample_url}`);
+            //     $(`.r34previewer-img`).attr("src", `${data[r34id].sample_url}`); //original
+            // }
+            // else if(data[r34id].type == "video"){
+            //     console.log(data[r34id].type);
                 
-                $(`.r34previewer-img`).attr("style", `display: none`);
-                $(`.r34previewer-vid`).attr("style", `display: block`);
+            //     $(`.r34previewer-img`).attr("style", `display: none`);
+            //     $(`.r34previewer-vid`).attr("style", `display: block`);
 
-                // $(`.r34previewer-vid`).attr("alt", `${data[r34id].sample_url}`);
-                $(`.r34previewer-vid`).attr("src", `${data[r34id].sample_url}`);
-            }
-            else{
-                // $(`.r34previewer-vid`).attr("alt", `${data[r34id].file_url}`);
-                // $(`.r34previewer-vid`).attr("src", `${data[r34id].file_url}`);
-                // $(`.r34previewer-img`).attr("alt", `${data[r34id].file_url}`);
-                // $(`.r34previewer-img`).attr("src", `${data[r34id].file_url}`);
-            }
+            //     // $(`.r34previewer-vid`).attr("alt", `${data[r34id].sample_url}`);
+            //     $(`.r34previewer-vid`).attr("src", `${data[r34id].sample_url}`); //original
+                
+            // }
+            // else{
+            //     // $(`.r34previewer-vid`).attr("alt", `${data[r34id].file_url}`);
+            //     // $(`.r34previewer-vid`).attr("src", `${data[r34id].file_url}`);
+            //     // $(`.r34previewer-img`).attr("alt", `${data[r34id].file_url}`);
+            //     // $(`.r34previewer-img`).attr("src", `${data[r34id].file_url}`);
+            // }
             
 
         }).fail(function(){
@@ -141,8 +142,19 @@ for(let x = 0; x <= maxValue; x++){
 // });
 
 
+document.getElementsByClassName('card__image-src').onclick = function () {
+    document.getElementById('nevergonnagiveyouup').play();
+    document.getElementById('nevergonnagiveyouup').classList.add('test')
+};
 
+$(document).ready(function(){
+    $('.card__image-src').click(function(event){
 
+        $('#nevergonnagiveyouup')
+        .toggleClass('active');
+
+    });
+});
 
 
 

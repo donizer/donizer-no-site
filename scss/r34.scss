@@ -1,5 +1,5 @@
 .r34previewer{
-	position: fixed;
+	position: absolute;
 
 	width: 100vw;
 	height: 100vh;
@@ -9,9 +9,9 @@
 	transition: background-color 0.2s ease 0s, background-color 0.7s ease 0s, transform 0s ease 0s;
 	background-color: rgba(255, 255, 255, 0);
 
-	display: hidden;
+	display: flex;
 	
-	z-index: -1;
+	z-index: -100;
 	
 	img{
 		width: 0;
@@ -35,4 +35,20 @@
 		max-height: 100vh;
 		transform: scale(1);
 	}
+	
 }
+// .nevergonnagiveyouup{
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+	
+// 	width: auto;
+// 	max-width: 100vw;
+// 	max-height: 100vh;
+// 	position: absolute;
+// 	top: 0;
+// 	z-index: -50;
+// 	&.active{
+// 		z-index: 50;
+// 	}
+// }

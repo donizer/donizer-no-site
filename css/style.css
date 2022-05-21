@@ -170,15 +170,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .r34previewer {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   top: 0%;
   right: 0%;
   transition: background-color 0.2s ease 0s, background-color 0.7s ease 0s, transform 0s ease 0s;
   background-color: rgba(255, 255, 255, 0);
-  display: hidden;
-  z-index: -1;
+  display: flex;
+  z-index: -100;
 }
 .r34previewer img {
   width: 0;
