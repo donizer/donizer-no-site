@@ -14,3 +14,5 @@ $(document).ready(function(){
 
 $('.header__burger').css({'cursor': 'pointer'});
 
+
+$('body').append(`<div class="backgroundAbs"></div>`);
