@@ -199,6 +199,21 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1);
 }
 
+html {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-size: cover;
+  background-position: 50% 25%;
+  background-attachment: fixed;
+}
+
+@media (max-width: 767px) {
+  html {
+    background-size: cover;
+    background-position: 50% 25%;
+    background-attachment: fixed;
+  }
+}
 .backgroundAbs {
   position: fixed;
   bottom: 0;

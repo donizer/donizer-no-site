@@ -3,24 +3,24 @@
 @import "r34";
 
 
-// html{
-//     background-color: #4158D0;
-//     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-//     background-size: cover;
-// 	background-position: 50% 25%;
-// 	background-attachment: fixed;
+html{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: cover;
+	background-position: 50% 25%;
+	background-attachment: fixed;
 	
-// }
-// @media (max-width: 767px) {
-// 	html{
-// 		// background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg);
-//         // background: no-repeat url('https://donizer.github.io/donizer-no-site/media/images/Ahri_portrait.jpg');
-// 		// background:rgb(28, 187, 192); 
-// 		background-size: cover;
-// 		background-position: 50% 25%;
-// 		background-attachment: fixed;
-// 	}
-// }
+}
+@media (max-width: 767px) {
+	html{
+		// background: no-repeat url(https://i.imgur.com/VIP9AL7.jpg);
+        // background: no-repeat url('https://donizer.github.io/donizer-no-site/media/images/Ahri_portrait.jpg');
+		// background:rgb(28, 187, 192); 
+		background-size: cover;
+		background-position: 50% 25%;
+		background-attachment: fixed;
+	}
+}
 
 .backgroundAbs{
     position: fixed;

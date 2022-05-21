@@ -1,4 +1,4 @@
-$('body').append(`<div class="backgroundAbs"></div>`);
+// $('body').append(`<div class="backgroundAbs"></div>`);
 
 $(document).ready(function(){
     $('.header__burger, .shade').click(function(event){
