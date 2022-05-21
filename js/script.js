@@ -1,3 +1,5 @@
+$('body').append(`<div class="backgroundAbs"></div>`);
+
 $(document).ready(function(){
     $('.header__burger, .shade').click(function(event){
 
@@ -15,4 +17,3 @@ $(document).ready(function(){
 $('.header__burger').css({'cursor': 'pointer'});
 
 
-$('body').append(`<div class="backgroundAbs"></div>`);
