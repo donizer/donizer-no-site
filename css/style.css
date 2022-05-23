@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0px;
   background-color: none;
   max-height: 275px;
-  max-width: 175px;
+  width: 175px;
   margin: 8px 2px;
 }
 .card__body.r34:hover {
