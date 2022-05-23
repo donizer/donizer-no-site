@@ -38,3 +38,14 @@
 	}
 	
 }
+
+.card {
+	&__image-src.anim{
+		border: 5px solid #f4ff5f;
+		
+		&:hover{
+			box-shadow: 0px 0px 15px #f4ff5f;
+		}
+	}
+
+}

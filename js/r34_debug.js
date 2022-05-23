@@ -1,7 +1,7 @@
 'use strict'
 
 
-let maxValue = 29;
+let maxValue = 99;
 
 var rerequestURL = `https://r34-json-api.herokuapp.com/posts?tags=ahri`
 var request = new XMLHttpRequest();
@@ -14,7 +14,7 @@ for(let x = 0; x <= maxValue; x++){
     $("<div>", {id: `r34obj${x}`, class: "card__body r34"}).append(
         $("<a>", {class: "card__image"}).append(
             $("<img>", {id: `r34img${x}`,
-            class: "card__image-src, lazyload"})
+            class: "card__image-src lazyload"})
             .append(
                 
             )
@@ -33,10 +33,18 @@ window.onload = function() {
             for(let x = 0; x <= maxValue; x++){
     
                 $(`#r34img${x}`).attr("src", `${data[x].preview_url}`);
-                $(`#r34obj${x}`).css("order", `-${data[x].score}`);
+
+                if(data[x].type == "video"){
+                    $(`#r34img${x}`).toggleClass('anim');
+                    console.log(`#r34img${x} is anim`);
+                }
+                
 
                 // console.log(`#r34img${x}`);
                 // console.log(`score of image №${x} is ${data[x].score}`);
+            }
+            for(let x = 0; x <= maxValue; x++){
+                // $(`#r34obj${x}`).css("order", `-${data[x].score}`);
             }
             
     
