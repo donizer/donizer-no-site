@@ -1,7 +1,7 @@
 'use strict'
 
 
-let maxValue = 99;
+let maxValue = 29;
 
 var rerequestURL = `https://r34-json-api.herokuapp.com/posts?tags=ahri`
 var request = new XMLHttpRequest();
