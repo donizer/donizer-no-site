@@ -54,6 +54,10 @@ body{
 	justify-content:center;
     flex-grow: 1;
 	height: auto;
+
+    &.lock{
+        overflow: hidden;
+    }
 }
 
 

@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .r34previewer {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0%;
@@ -178,6 +178,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color 0.2s ease 0s, background-color 0.7s ease 0s, transform 0s ease 0s;
   background-color: rgba(255, 255, 255, 0);
   display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: -100;
 }
 .r34previewer img {
@@ -187,9 +189,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .r34previewer.active {
   background-color: rgba(0, 0, 0, 0.333);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 10;
 }
 .r34previewer.active img, .r34previewer.active video {
@@ -233,6 +232,9 @@ body {
   justify-content: center;
   flex-grow: 1;
   height: auto;
+}
+body.lock {
+  overflow: hidden;
 }
 
 .wrapper {
