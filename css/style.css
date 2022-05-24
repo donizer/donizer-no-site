@@ -124,8 +124,8 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.035);
 }
 .card__image {
-  height: 350px;
-  max-width: 250px;
+  height: 275px;
+  width: 185px;
   transition: all 0.3s ease 0s;
 }
 .card__image img {

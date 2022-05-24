@@ -3,10 +3,10 @@
 
 let maxValue = 99;
 
-var rerequestURL = `https://r34-json-api.herokuapp.com/posts?tags=ahri`
-var request = new XMLHttpRequest();
-request.open('GET', rerequestURL)
-request.responseType = 'json';
+// var rerequestURL = `https://r34-json-api.herokuapp.com/posts?tags=ahri`
+// var request = new XMLHttpRequest();
+// request.open('GET', rerequestURL)
+// request.responseType = 'json';
 
 
 for(let x = 0; x <= maxValue; x++){
@@ -29,28 +29,28 @@ window.onload = function() {
 
     
     
-        $.getJSON(rerequestURL, function(data){
-            for(let x = 0; x <= maxValue; x++){
-    
-                $(`#r34img${x}`).attr("src", `${data[x].preview_url}`);
+    $.getJSON(rerequestURL, function(data){
+        for(let x = 0; x <= maxValue; x++){
 
-                if(data[x].type == "video"){
-                    $(`#r34img${x}`).toggleClass('anim');
-                    console.log(`#r34img${x} is anim`);
-                }
-                
+            $(`#r34img${x}`).attr("src", `${data[x].preview_url}`);
 
-                // console.log(`#r34img${x}`);
-                // console.log(`score of image №${x} is ${data[x].score}`);
-            }
-            for(let x = 0; x <= maxValue; x++){
-                // $(`#r34obj${x}`).css("order", `-${data[x].score}`);
+            if(data[x].type == "video"){
+                $(`#r34img${x}`).toggleClass('anim');
+                console.log(`#r34img${x} is anim`);
             }
             
-    
-        }).fail(function(){
-            console.log("An error has occurred.");
-        });
+
+            // console.log(`#r34img${x}`);
+            // console.log(`score of image №${x} is ${data[x].score}`);
+        }
+        for(let x = 0; x <= maxValue; x++){
+            // $(`#r34obj${x}`).css("order", `-${data[x].score}`);
+        }
+        
+
+    }).fail(function(){
+        console.log("An error has occurred.");
+    });
    
 
 
@@ -115,3 +115,5 @@ $('.r34previewer').click(function(event){
     $(`.r34previewer-img`).attr("src", '#');
     $(`.r34previewer-vid`).attr("src", '#');
 });
+
+
