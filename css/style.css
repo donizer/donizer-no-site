@@ -96,13 +96,13 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  max-width: max-content;
+  max-width: 260px;
   background-color: #c441d0;
-  max-height: 400px;
+  height: 375px;
   justify-content: space-between;
-  margin: 10px;
+  margin: 10px 0;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   transition: all 0.333s cubic-bezier(0.22, 0.68, 0, 1.71) 0s;
 }
 .card__body:hover {
@@ -125,11 +125,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .card__image {
   height: 275px;
-  width: 185px;
   transition: all 0.3s ease 0s;
 }
 .card__image img {
-  border-radius: 10px;
+  border-radius: 13px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -139,9 +138,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.822);
-  flex-grow: 1;
+  flex: 1 0 60px;
   justify-content: center;
-  max-height: 90px;
+  align-items: center;
+  height: auto;
   overflow: hidden;
   margin: 15px 0 0;
   padding: 0 0 5px;
@@ -164,11 +164,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   font-weight: 700;
-  display: flex;
   font-size: 28px;
   text-align: center;
   max-width: 250px;
-  height: 100%;
 }
 
 .r34previewer {
@@ -184,7 +182,10 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   z-index: -100;
 }
-.r34previewer img {
+.r34previewer img, .r34previewer video {
+  position: absolute;
+  top: 1/2;
+  left: 1/2;
   width: 0;
   transform: scale(0);
 }
@@ -241,6 +242,8 @@ body {
   justify-content: center;
   flex-grow: 1;
   height: auto;
+  width: auto;
+  overflow-x: hidden;
 }
 body.lock {
   overflow: hidden;
@@ -329,7 +332,7 @@ body.lock {
 
 .main {
   display: flex;
-  flex-grow: 1;
+  flex: 1 0 250px;
 }
 
 .aside {

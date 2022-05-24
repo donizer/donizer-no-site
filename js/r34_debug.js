@@ -34,10 +34,10 @@ window.onload = function() {
 
             $(`#r34img${x}`).attr("src", `${data[x].preview_url}`);
 
-            if(data[x].type == "video"){
-                $(`#r34img${x}`).toggleClass('anim');
-                console.log(`#r34img${x} is anim`);
-            }
+            // if(data[x].type == "video"){
+            //     $(`#r34img${x}`).toggleClass('anim');
+            //     console.log(`#r34img${x} is anim`);
+            // }
             
 
             // console.log(`#r34img${x}`);
