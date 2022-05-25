@@ -73,7 +73,7 @@ window.onload = function() {
 			// request.responseType = 'blob';
 			// request.send();
 	
-			console.log(imageURL);
+			// console.log(imageURL);
 
 
 			let last4CharURL = r34URLFull.slice(-3)
@@ -82,7 +82,7 @@ window.onload = function() {
 				isMp4 = true;
 			}
 
-			console.log(last4CharURL);
+			// console.log(last4CharURL);
 
 			var addVideo = 
 			$("<video>", {id: "r34previewer-vid", class: "r34previewer-vid", src: `${imageURL}`, autoplay: '1', loop: '1'});
@@ -94,11 +94,15 @@ window.onload = function() {
 
 			if(isMp4){
 				// $('#r34previewer-vid').attr('src', `${imageURL}`)
+				console.log(addVideo)
 				$('#r34previewer').append(addVideo);
 				isVideo = true;
+				addVideo = '';
+				console.log(addVideo)
 			} else {
 				$('#r34previewer').append(addImage);
 				isVideo = false;
+				addImage = '';
 			}
 
 
@@ -121,7 +125,7 @@ window.onload = function() {
 
 		
 		// var evenVid = document.getElementsByClassName('r34previewer')[0];
-		console.log(isVideo);
+		// console.log(isVideo);
 		// console.log(!!evenVid.children.length);
 
 		if(isVideo){
@@ -130,7 +134,7 @@ window.onload = function() {
 			document.getElementById('r34previewer-img').remove();
 		}
 
-		console.log('123')
+		// console.log('123')
 	
 		$('.card__body, .r34previewer')
 		.toggleClass('active');
