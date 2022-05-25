@@ -25,6 +25,7 @@ for(let x = 0; x < maxValue; x++){
 }
 
 window.onload = function() {
+	var isVideo = false;
     $.getJSON(rerequestURL, function(data){
         
 		for(let x = 0; x < maxValue; x++){
@@ -48,6 +49,8 @@ window.onload = function() {
 		}
         
 		// console.log(data)
+
+
 
 		$('.card__image-src').click(function(event){
 		
@@ -82,15 +85,20 @@ window.onload = function() {
 			console.log(last4CharURL);
 
 			var addVideo = 
-			$("<video>", {id: "r34previewer-vid", class: "r34previewer-vid", src: `${imageURL}`});
+			$("<video>", {id: "r34previewer-vid", class: "r34previewer-vid", src: `${imageURL}`, autoplay: '1', loop: '1'});
+
+			var addImage = 
+			$("<img>", {id: "r34previewer-img", class: "r34previewer-img", src: `${r34URLSimple}`});
 
 			
+
 			if(isMp4){
 				// $('#r34previewer-vid').attr('src', `${imageURL}`)
 				$('#r34previewer').append(addVideo);
-				document.getElementById('r34previewer-vid').play();
+				isVideo = true;
 			} else {
-				$('#r34previewer-img').attr('src', `${r34URLSimple}`)
+				$('#r34previewer').append(addImage);
+				isVideo = false;
 			}
 
 
@@ -109,18 +117,32 @@ window.onload = function() {
         console.log("An error has occurred.");
     });
 
+	$('#r34previewer').click(function(event){
+
+		
+		// var evenVid = document.getElementsByClassName('r34previewer')[0];
+		console.log(isVideo);
+		// console.log(!!evenVid.children.length);
+
+		if(isVideo){
+			document.getElementById('r34previewer-vid').remove();
+		} else {
+			document.getElementById('r34previewer-img').remove();
+		}
+
+		console.log('123')
+	
+		$('.card__body, .r34previewer')
+		.toggleClass('active');
+		$('body')
+		.toggleClass('lock');
+	
+		// $(`#r34previewer-img`).attr("src", '../media/images/placeholder.svg');
+		// $(`#r34previewer-vid`).attr("src", '#');
+		// $(`#r34previewer-vid`).get(0).pause();
+	
+	});
+	
+
 
 }
-
-$('.r34previewer').click(function(event){
-    $('.card__body, .r34previewer')
-    .toggleClass('active');
-    $('body')
-    .toggleClass('lock');
-
-    $(`#r34previewer-img`).attr("src", '../media/images/placeholder.svg');
-    // $(`#r34previewer-vid`).attr("src", '#');
-	// $(`#r34previewer-vid`).get(0).pause();
-	document.getElementById('r34previewer-vid').pause();
-	document.getElementById('r34previewer-vid').remove();
-});
