@@ -70,7 +70,7 @@ $(document).ready(function(){
 					r34ID = r34data[r34id].id;
 
 
-					var imageURL = `https://rule34.xxx//${type}/${r34Folder}/${r34Hash}.${r34Format}?${r34ID}`
+					var imageURL = `https://wimg.rule34.xxx//${type}/${r34Folder}/${r34Hash}.${r34Format}?${r34ID}`
 					
 				} else if (r34data[r34id].sample == 0) {
 
@@ -82,7 +82,7 @@ $(document).ready(function(){
 					r34ID = r34data[r34id].id;
 
 
-					var imageURL = `https://rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`
+					var imageURL = `https://wimg.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`
 					
 				}
 
