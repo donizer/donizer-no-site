@@ -15,14 +15,6 @@
 	
 	z-index: -100;
 	
-	img, video{
-		position: absolute;
-		top: 1/2;
-		left: 1/2;
-
-		width: 0;
-		transform: scale(0);
-	}
 }
 .r34previewer.active{
 	background-color: rgba(0, 0, 0, 0.333);
@@ -35,12 +27,27 @@
 	
 
 	img, video{
-		width: auto;
-		max-width: 100vw;
-		max-height: 100vh;
-		transform: scale(1);
+
+		z-index: 11;
+		max-width: 90vw;
+		max-height: 90vh;
 	}
 	
+}
+
+.mediaPreviewer{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// min-width: 90vw;
+	// min-height: 90vh;
+	background-image: url(../media/images/placeholder.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+
 }
 
 .card {

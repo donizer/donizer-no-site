@@ -1,0 +1,18 @@
+<html>
+<body>
+<form>
+    <input type="text" id="imagename" value="" />
+    <input type="button" id="btn" value="GO" />
+</form>
+    <script type="text/javascript">
+        document.getElementById('btn').onclick = function() {
+            var val = document.getElementById('imagename').value,
+                src = 'https://api-cdn.rule34.xxx/samples/5384/sample_d3c7ccd8a3d5c7ef240549aab4484070.jpg',
+                img = document.createElement('img');
+
+            img.src = src;
+            document.body.appendChild(img);
+        }
+    </script>
+</body>
+</html>
