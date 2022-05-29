@@ -84,7 +84,7 @@ $(document).ready(function(){
 
 					// var imageURL = `https://api-cdn.rule34.xxx/${type}/${r34Folder}/${r34Image}.${r34Format}` // робоча страта
 				
-					var imageURL = `/media/video/Rick Astley - Never Gonna Give You Up (Official Music Video).mp4`
+					var imageURL = `../../media/video/Rick Astley - Never Gonna Give You Up (Official Music Video).mp4`
 					// var imageURLalt1 = `https://api-cdn.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}`
 					// var imageURLalt2 = `https://api-cdn-mp4.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}`
 					// var imageURLalt3 = `https://ws-cdn-video.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`
