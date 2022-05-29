@@ -1,5 +1,5 @@
 // var rerequestURL = `https://r34-json-api.herokuapp.com/posts?tags=ahri`
-var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&tags=mp4`
+var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1`
 var request = new XMLHttpRequest();
 request.open('GET', rerequestURL)
 request.responseType = 'json';
