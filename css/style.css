@@ -192,6 +192,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 90vw;
   max-height: 90vh;
 }
+.r34previewer.active video {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+}
 
 .mediaPreviewer {
   display: flex;

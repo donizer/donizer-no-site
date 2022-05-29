@@ -82,27 +82,44 @@ $(document).ready(function(){
 				if(r34Format == 'mp4'){
 					type = 'images';
 
-					// var imageURL = `https://ws-cdn-video.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}`
-					// var imageURL = r34data[thisId].file_url;
-					var imageURL = 'https://rule34.xxx/images/5402/2a0d1ec831997dbd60618dfae9d52002.mp4?6153181';
-
-/* 
-https://ws-cdn-video.rule34.xxx//images/5402/2a0d1ec831997dbd60618dfae9d52002.mp4?6153181
-https://ws-cdn-video.rule34.xxx//images/5402/2a0d1ec831997dbd60618dfae9d52002.mp4?6153181
-
-
-*/
-
+					// var imageURL = `https://api-cdn.rule34.xxx/${type}/${r34Folder}/${r34Image}.${r34Format}` // робоча страта
+				
+					var imageURL = `/media/video/Rick Astley - Never Gonna Give You Up (Official Music Video).mp4`
+					// var imageURLalt1 = `https://api-cdn.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}`
+					// var imageURLalt2 = `https://api-cdn-mp4.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}`
+					// var imageURLalt3 = `https://ws-cdn-video.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`
+				
 					var div_prviewer = 
 					$("<video>", {
 						id: "r34previewer-img",
 						class: "r34previewer-img",
-						src: imageURL,
-						controls: "controls"
+						controls: "controls",
+						preload: "auto",
+						autiplay: "autiplay"
 					});
 					$('#mediaPreviewer').append(div_prviewer);
 
-					// $("#r34previewer-img").html(`<source src="${imageURL}" type="video/mp4"></source>`)
+					$("#r34previewer-img").html(`<source src="${imageURL}" type="video/mp4"></source>
+												 `)
+												console.log(imageURL)
+												// console.log(imageURLalt1)
+												// console.log(imageURLalt2)
+												// console.log(imageURLalt3)
+
+					// https://ws-cdn-video.rule34.xxx//images/5402/2a0d1ec831997dbd60618dfae9d52002.mp4?6153181
+					// var imageURL = 'https://donizer.github.io/donizer-no-site/media/video/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4';
+					// var imageURL = 'https://rule34.xxx/images/5402/2a0d1ec831997dbd60618dfae9d52002.mp4?6153181';
+
+/* 
+	 https://api-cdn.rule34.xxx//images/5403/3ba7491d276bd9cc24ffb1d814cfabca.mp4
+	 	 	 https://rule34.xxx/index.php?page=post&s=view&id=6153978
+https://ws-cdn-video.rule34.xxx//images/5403/3ba7491d276bd9cc24ffb1d814cfabca.mp4?6153978
+
+	 https://api-cdn.rule34.xxx/images/5400/989f910fce8faa790b6057f527cd5262.mp4
+			 https://rule34.xxx/index.php?page=post&s=view&id=6150301
+https://ws-cdn-video.rule34.xxx//images/5400/989f910fce8faa790b6057f527cd5262.mp4?6150301
+
+*/
 
 				} else {
 					if(r34data[thisId].sample == 1) {
@@ -131,15 +148,7 @@ https://ws-cdn-video.rule34.xxx//images/5402/2a0d1ec831997dbd60618dfae9d52002.mp
 					});
 					$('#mediaPreviewer').append(div_prviewer);
 				} 
-							
 
-	
-	
-				console.log(imageURL)
-				console.log(r34ImageArray)
-				console.log(r34Format)
-
-		
 			} else if (this.id == 'r34previewer') {
 				console.log(this.id)
 		
