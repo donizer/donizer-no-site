@@ -1,5 +1,5 @@
 // var rerequestURL = `https://r34-json-api.herokuapp.com/posts?tags=ahri`
-var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1`
+var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&tags=ahri`
 var request = new XMLHttpRequest();
 request.open('GET', rerequestURL)
 request.responseType = 'json';
@@ -82,9 +82,8 @@ $(document).ready(function(){
 				if(r34Format == 'mp4'){
 					type = 'images';
 
-					// var imageURL = `https://api-cdn.rule34.xxx/${type}/${r34Folder}/${r34Image}.${r34Format}` // робоча страта
+					var imageURL = `https://api-cdn.rule34.xxx/${type}/${r34Folder}/${r34Image}.${r34Format}` // робоча страта
 				
-					var imageURL = `https://donizer.github.io/donizer-no-site/media/video/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4`
 					// var imageURLalt1 = `https://api-cdn.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}`
 					// var imageURLalt2 = `https://api-cdn-mp4.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}`
 					// var imageURLalt3 = `https://ws-cdn-video.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`
@@ -99,73 +98,77 @@ $(document).ready(function(){
 					$('#mediaPreviewer').append(div_prviewer);
 
 					$("#r34previewer-img").html(`<source src="${imageURL}" type="video/mp4"></source>
-												 `)
-												console.log(imageURL)
-												// console.log(imageURLalt1)
-												// console.log(imageURLalt2)
-												// console.log(imageURLalt3)
+					`)
+					console.log(imageURL)
+					// console.log(imageURLalt1)
+					// console.log(imageURLalt2)
+					// console.log(imageURLalt3)
 
-					// https://ws-cdn-video.rule34.xxx//images/5402/2a0d1ec831997dbd60618dfae9d52002.mp4?6153181
-					// var imageURL = 'https://donizer.github.io/donizer-no-site/media/video/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4';
-					// var imageURL = 'https://rule34.xxx/images/5402/2a0d1ec831997dbd60618dfae9d52002.mp4?6153181';
+					/* 
 
-/* 
-	 https://api-cdn.rule34.xxx//images/5403/3ba7491d276bd9cc24ffb1d814cfabca.mp4
-	 	 	 https://rule34.xxx/index.php?page=post&s=view&id=6153978
-https://ws-cdn-video.rule34.xxx//images/5403/3ba7491d276bd9cc24ffb1d814cfabca.mp4?6153978
+					https://wimg.rule34.xxx//images/5393/a0da64b2d9a567743079268f52b114b5.jpeg?6143047
 
-	 https://api-cdn.rule34.xxx/images/5400/989f910fce8faa790b6057f527cd5262.mp4
-			 https://rule34.xxx/index.php?page=post&s=view&id=6150301
-https://ws-cdn-video.rule34.xxx//images/5400/989f910fce8faa790b6057f527cd5262.mp4?6150301
-
-*/
+					*/
 
 				} else {
 					if(r34data[thisId].sample == 1) {
-
-						type = 'samples';
-						r34Format = 'jpg'
 	
-						var imageURL = `https://rule34.xxx//${type}/${r34Folder}/sample_${r34Image}.${r34Format}?${r34ID}`
+						var imageURLFull =   `https://wimg.rule34.xxx//images/${r34Folder}/${r34Image}.${r34Format}`;
+
+
+						if (r34Format == 'jpg')
+						var imageURLSample = `https://rule34.xxx//samples/${r34Folder}/sample_${r34Image}.jpg`;
+						else
+						var imageURLSample = `https://rule34.xxx//samples/${r34Folder}/sample_${r34Image}.jpg?${r34ID}`;						
+
+
+						console.log(`1 sample is ${imageURLSample}`);
+						console.log(`1 full is ${imageURLFull}`);
 						
 					} else if (r34data[thisId].sample == 0) {
 	
-						type = 'images';
-	
-						if(r34Format == 'png' || r34Format == 'jpeg'){
-							var imageURL = `https://wimg.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`
+						if (r34Format == 'jpeg'){
+							var imageURLFull =   `https://wimg.rule34.xxx//images/${r34Folder}/${r34Image}.${r34Format}`;
+						
+							var imageURLSample = `${imageURLFull}?${r34ID}`;
 						} else {
-							var imageURL = `https://rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`
+							var imageURLFull =   `https://wimg.rule34.xxx//images/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`;
+						
+							var imageURLSample = `${imageURLFull}`;
+
 						}
+
+
+						console.log(`0 sample is ${imageURLSample}`);
+						console.log(`0 full is ${imageURLFull}`);
 					}
 
+					// var apiFullURL = `https://api-cdn.rule34.xxx//${type}/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`;
+
 					var div_prviewer = 
-					$("<img>", {
-						id: "r34previewer-img",
-						class: "r34previewer-img lazyload",
-						src: imageURL
-					});
+					$("<picture>", {
+						id: "r34previewer-img"
+					}).append(
+						$("<source>", {srcset: imageURLSample}),
+						$("<source>", {srcset: imageURLFull}),
+						$("<img>", {
+							// id: "r34previewer-img",
+							class: "r34previewer-img"
+						})
+					);
 					$('#mediaPreviewer').append(div_prviewer);
+
 				} 
 
 			} else if (this.id == 'r34previewer') {
-				console.log(this.id)
+				console.log(this.id);
 		
 				$('#r34previewer-img').remove();
 			}
-	
-/*
-	 https://rule34.xxx//images/5403/845824dba5547ae6c3eba3762fac6d8d.jpeg?6153622 я
-https://wimg.rule34.xxx//images/5403/845824dba5547ae6c3eba3762fac6d8d.jpeg?6153622 надо
 
-
-*/
-	
 			$('.r34previewer').toggleClass('active');
 			$('body').toggleClass('lock');	
 	
 		});
-
 	}
-	
 }); 
