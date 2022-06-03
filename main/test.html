@@ -75,15 +75,26 @@
                     <div class="content-body">
 
 
-                        <picture style="width:100%; max-width: 560px;">
+                        <video id="myVideo" width="320" height="240" controls>
+                            <!--    https://api-cdn.rule34.xxx/images/3303/fd39f46e128877908794947851a674da.mp4 -->
+                            <source id="mySource" src="https://cdn.discordapp.com/attachments/497404476907454466/980929933540986960/chrome_c2k7WortVy.mp4" type="video/mp4">
+                            <!-- <source id="mySource" src="https://ws-cdn-video.rule34.xxx//images/5422/ca955c1d5aeb46d0816e9d0952507e89.mp4" type="video/mp4"> -->
+                           
+                        </video> 
 
+                        <script>
+                            console.log(document.getElementById("myVideo").src);
+                            document.getElementById("mySource").src = document.getElementById("mySource").src;
+                            document.getElementById("myVideo").load();
 
-                            <!-- <source srcset="https://wimg.rule34.xxx//images/5402/40e9061ad4c907714600d079c8a9e8e4.jpeg?6152952"> -->
-                            <source srcset="https://wimg.rule34.xxx//images/5402/40e9061ad4c907714600d079c8a9e8e4.jpeg">
-                            <img src="https://wimg.rule34.xxx//images/5402/40e9061ad4c907714600d079c8a9e8e4.jpeg?6152952" style="width: 100%; max-width: 350px;">
-                            
+                            async function getBlob(file) {
+                                let x = await fetch(file);
+                                let y = await x.blob();
+                                console.log(y);
+                            }
 
-                        </picture>
+                            // getBlob('https://cdn.discordapp.com/attachments/497404476907454466/980929933540986960/chrome_c2k7WortVy.mp4')
+                        </script>
                         
                         
                     </div>
