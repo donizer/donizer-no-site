@@ -1,16 +1,77 @@
 // var rerequestURL = `https://r34-json-api.herokuapp.com/posts?tags=ahri`
 
-// var h = 0;
-// while(h <= 10){
+var h = 0;
+var recivedData = [];
+while(h <= 10){
 
-// 	var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&tags=ahri+-mp4+-video&pid=${h}`
+
+	var requestArray = ``;
+
+	var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&limit=1000&json=1&tags=ahri+-mp4+-video&pid=${h}`
+
+
+	$.getJSON(rerequestURL).then(function(data){
+		
+	console.log(`${h} is ${data.length}`)
+	});
+
+
 	
 
-	
-// 	console.log(h)
-// 	h++;
 
+	// console.log(rerequestURL)
+	
+	
+	h++;
+
+}
+
+// 123
+// for (var i = 0; i <= 10; i++) {
+//     $.ajax({
+// 		dataType: "json",
+//         url: `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&limit=1000&json=1&tags=ahri+-mp4+-video&pid=${i}`,
+		
+//         type: 'GET',
+//         beforeSend: function() {
+//             console.log("Downloading ");
+//         },
+//         async: false,
+//         complete: function() {
+//         },
+//         success: function(result) {
+// 			var getResult = result;
+
+//             console.log("Download Success ");
+// 			console.log(result.length)
+			
+//         }
+		
+//     });
+// 	if (getResult.length == 0) { break; }
 // }
+// 123
+
+// for (var i = 1; i <= 10 || result.length == 0; i++) {
+//     $.ajax({
+// 		dataType: "json",
+//         url: `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&limit=1000&json=1&tags=ahri+-mp4+-video&pid=${i}`,
+		
+//         type: 'GET',
+//         beforeSend: function() {
+//             console.log("Downloading ");
+//         },
+//         async: false,
+//         complete: function() {
+//         },
+//         success: function(result) {
+//             console.log("Download Success ");
+// 			console.log(result)
+//         }
+//     });
+// }
+
+
 
 var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&tags=ahri+-mp4+-video`
 var request = new XMLHttpRequest();
