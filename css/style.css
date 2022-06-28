@@ -169,6 +169,51 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 250px;
 }
 
+.mid-header {
+  width: 100%;
+  display: flex;
+  margin: 15px 0 0;
+  align-items: center;
+}
+.mid-header .item {
+  margin: 0 15px 0;
+}
+.mid-header .button {
+  width: 175px;
+  height: 50px;
+}
+
+.quality-switcher {
+  left: 20px;
+  bottom: 50px;
+}
+
+.button {
+  border-radius: 8px;
+  border: solid rgb(0, 0, 0);
+  transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+  background-color: #e2c315;
+}
+
+.button-bad {
+  background-color: #21D4FD;
+}
+
+.midContainer {
+  background-color: #fff;
+  display: flex;
+  flex: 1 1 200px;
+  flex-direction: row;
+}
+
+.sideOptions {
+  background-color: rgb(202, 97, 97);
+  flex: 0 0 200px;
+}
+.sideOptions ul {
+  margin: 10px;
+}
+
 .r34previewer {
   position: fixed;
   width: 100vw;
@@ -345,7 +390,7 @@ body.lock {
 }
 
 .aside {
-  flex: 0 0 250px;
+  flex: 0 0 175px;
 }
 
 .content {

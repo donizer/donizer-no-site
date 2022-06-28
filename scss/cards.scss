@@ -138,3 +138,56 @@
 
 }
 
+.mid-header{
+    // background-color: #fff;
+    width: 100%;
+    display: flex;
+    margin: 15px 0 0;
+    align-items: center;
+
+    .item{
+        margin: 0 15px 0;
+    }
+
+    .button{
+        width: 175px;
+        height: 50px;
+    }
+}
+
+.quality-switcher{    
+    
+    left: 20px;
+    bottom: 50px;
+   
+}
+.button{
+
+    border-radius: 8px;
+    border: solid rgb(0, 0, 0);
+
+    transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    background-color: #e2c315;
+
+}
+.button-bad{
+    background-color: #21D4FD;
+
+}
+
+.midContainer{
+    background-color: #fff;
+
+    display: flex;
+    flex: 1 1 200px;
+    flex-direction: row;
+}
+.sideOptions{
+    background-color: rgb(202, 97, 97);
+    flex: 0 0 200px;
+
+    ul{
+        margin: 10px;
+    }
+}

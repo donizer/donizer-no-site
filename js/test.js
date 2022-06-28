@@ -73,11 +73,29 @@ while(h <= 10){
 
 
 
-var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&tags=ahri+-mp4+-video`
+var rerequestURL = `https://api.rule34.xxx/index.php?page=dapi&s=post&q=index&json=1&tags=ahri+-mp4+-video&limit=1000`
 var request = new XMLHttpRequest();
 request.open('GET', rerequestURL)
 request.responseType = 'json';
 request.send();
+
+
+var isHD = false;
+
+function changeQuality(){
+	isHD = !isHD;
+	document.getElementById("quality-changer").classList.toggle('button-bad');
+	console.log(isHD)
+
+	
+	if(isHD == true){
+	document.getElementById("quality-changer").innerHTML = "Switch quality to SD";
+	} else {
+	document.getElementById("quality-changer").innerHTML = "Switch quality to HD";
+	}
+	
+};
+
 
 request.onload = function() {
 	var r34data = request.response;
@@ -176,6 +194,7 @@ request.onload = function() {
 						var imageURLFull =   `https://wimg.rule34.xxx//images/${r34Folder}/${r34Image}.${r34Format}`;
 					
 						var imageURLSample = `${imageURLFull}?${r34ID}`;
+
 					} else {
 						var imageURLFull =   `https://wimg.rule34.xxx//images/${r34Folder}/${r34Image}.${r34Format}?${r34ID}`;
 					
@@ -187,18 +206,29 @@ request.onload = function() {
 					console.log(`0 full is ${imageURLFull}`);
 				}
 
-				var div_prviewer = 
-				$("<picture>", {
-					id: "r34previewer-img"
-				}).append(
-					$("<source>", {srcset: imageURLSample}),
-					$("<source>", {srcset: imageURLFull}),
-					$("<img>", {
-						class: "r34previewer-img"
-					})
-				);
-				$('#mediaPreviewer').append(div_prviewer);
-
+				if(isHD == true) {
+					var div_prviewer = 
+					$("<picture>", {
+						id: "r34previewer-img"
+					}).append(
+						$("<source>", {srcset: imageURLFull}),
+						$("<img>", {
+							class: "r34previewer-img"
+						})
+					);
+					$('#mediaPreviewer').append(div_prviewer);
+				} else {
+					var div_prviewer = 
+					$("<picture>", {
+						id: "r34previewer-img"
+					}).append(
+						$("<source>", {srcset: imageURLSample}),
+						$("<img>", {
+							class: "r34previewer-img"
+						})
+					);
+					$('#mediaPreviewer').append(div_prviewer);	
+				}
 			} 
 
 		} else if (this.id == 'r34previewer') {
@@ -211,4 +241,6 @@ request.onload = function() {
 
 	});
 }
+
+
 
